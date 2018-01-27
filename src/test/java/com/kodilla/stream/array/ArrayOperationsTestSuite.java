@@ -8,7 +8,7 @@ import java.util.OptionalDouble;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class ArrayOperationsTestSuite implements ArrayOperations {
+public class ArrayOperationsTestSuite {
 
     @Test
     public void testGetAverage() {
