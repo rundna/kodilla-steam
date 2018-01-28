@@ -3,7 +3,7 @@ package com.kodilla.stream;
 import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
-public class StreamMain {
+public class StreamMain_frist {
     public static void main(String[] args) {
     System.out.println("Welcome to module 7 - Stream");
     Processor process = new Processor();
