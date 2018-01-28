@@ -170,7 +170,7 @@ public class BoardTestSuite {
         List<TaskList> inProgress = new ArrayList<>();
         inProgress.add(new TaskList("In progress"));
 
-        Double avg = project.getTaskLists().stream()
+        Double averageDays = project.getTaskLists().stream()
                 .filter(inProgress::contains)
                 .flatMap(n->n.getTasks().stream())
                 .mapToLong(n->ChronoUnit.DAYS.between(n.getCreated(),LocalDate.now()))
@@ -178,7 +178,7 @@ public class BoardTestSuite {
                 .getAsDouble();
 
 
-        assertEquals(0, avg.compareTo(10.0));
+        assertEquals(0, averageDays.compareTo(10.0));
 
 
     }
