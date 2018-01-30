@@ -30,10 +30,10 @@ public class FlightSearch {
         }
 
     public static void main(String[] args) {
-        FlightSearch checkConnection = new FlightSearch();
-        FlightSearch checkConnection2 = new FlightSearch();
-        FlightSearch checkConnection3 = new FlightSearch();
-        FlightSearch checkConnection4 = new FlightSearch();
+        //FlightSearch checkConnection = new FlightSearch();
+        //FlightSearch checkConnection2 = new FlightSearch();
+        //FlightSearch checkConnection3 = new FlightSearch();
+        //FlightSearch checkConnection4 = new FlightSearch();
         FlightSearch checkConnection5 = new FlightSearch();
 
         try {
