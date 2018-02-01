@@ -3,6 +3,7 @@ package com.kodilla.good.patterns.challenges;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class MovieStore {
@@ -39,16 +40,11 @@ class MovieStore {
             titleList.add(entry.getValue());
             }
 
-            List<String> flatList = titleList.stream()
+            String flatList = titleList.stream()
                         .flatMap(m->m.stream())
-                        .collect(toList());
+                        .collect(joining("!"));
 
-            String joinedListItems ="!";
-
-            for(int i=0;i<flatList.size();i++){
-                joinedListItems = joinedListItems + flatList.get(i) + "!";
-            }
-            System.out.println(joinedListItems);
+            System.out.println(flatList);
 
     }
 }
