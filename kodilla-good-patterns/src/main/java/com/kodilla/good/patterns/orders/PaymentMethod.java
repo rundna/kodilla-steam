@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.orders;
 public class PaymentMethod implements Payment{
 
     public Integer processPayment(){
-        Integer paymentBy = 2;
+        Integer paymentBy = 4;
         switch(paymentBy){
             case 1: System.out.println("Payment method: Cash");
                     break;
@@ -12,6 +12,7 @@ public class PaymentMethod implements Payment{
             case 3: System.out.println("Payment method: PayPal");
                     break;
             default: System.out.println("No payment method selected! Choose payment method to finalize Your order.");
+                    return 0;
         }
     return paymentBy;}
 }
