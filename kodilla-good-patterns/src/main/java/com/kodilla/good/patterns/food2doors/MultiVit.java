@@ -30,7 +30,8 @@ public class MultiVit implements Shop {
                     + getClass().getSimpleName() + "\nYou can still purchase additional " + updatedQuantity + " items of our finest "
                     + order.getProductName() +"!\nPlease proceed to payment.\nThank you for using our service! Enjoy your purchase!");
         }else{
-            System.out.println("We're sorry to inform, but we can not deliver your goods in amount of " + order.getQuantity());
+            System.out.println("We're sorry to inform, but we can not process your request in amount of:  " + order.getQuantity()
+                    + "\nBest of luck from: "+getClass().getSimpleName());
         }
             //for(Map.Entry<String, Integer> item:inventory.entrySet()){
               //  System.out.println(item.getKey()+","+item.getValue());}

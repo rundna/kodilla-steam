@@ -24,18 +24,8 @@ public class OrderRetriever {
 
         if(inventory.containsKey(searchedProduct.getProductName())){
             order = new OrderDTO(searchedProduct.getProductName(),inventory.get(searchedProduct.getProductName()),searchedProduct.getQuantity());
-            System.out.println(order.toString());
+            //System.out.println(order.toString());
         }
-        //for(Map.Entry<String,Shop> item:inventory.entrySet()) {
-            //boolean trfal = item.getKey().equals(searchedProduct.getProductName());
-            //System.out.println(trfal + " " + item.getKey() + " " + searchedProduct.getProductName());
-            //if (item.getKey().equals(searchedProduct.getProductName())) {
-              //  order = new OrderDTO(item.getKey(), item.getValue(), searchedProduct.getQuantity());
-                //Shop shop = (Shop) order.getShop();
-                //shop.process();
-              //  break;
-           // }
-        //}
             if(order==null){
                 throw new NoInventory();
             }
