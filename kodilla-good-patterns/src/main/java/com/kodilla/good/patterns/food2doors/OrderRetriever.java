@@ -5,10 +5,11 @@ import java.util.*;
 
 public class OrderRetriever {
     private OrderDTO order;
+    private Shop shop;
 
     public OrderDTO searchInventory(OrderItem searchedProduct) throws NoInventory
         {
-        HashMap<String, Object> inventory = new HashMap<>();
+        HashMap<String, Shop> inventory = new HashMap<>();
 
         inventory.put("banana", new VegeShop());
         inventory.put("apple",new VegeShop());
@@ -21,15 +22,20 @@ public class OrderRetriever {
         inventory.put("strawberries", new CrazyBananas());
         inventory.put("orange", new VegeShop());
 
-        for(Map.Entry<String,Object> item:inventory.entrySet()) {
+        if(inventory.containsKey(searchedProduct.getProductName())){
+            order = new OrderDTO(searchedProduct.getProductName(),inventory.get(searchedProduct.getProductName()),searchedProduct.getQuantity());
+            System.out.println(order.toString());
+        }
+        //for(Map.Entry<String,Shop> item:inventory.entrySet()) {
             //boolean trfal = item.getKey().equals(searchedProduct.getProductName());
             //System.out.println(trfal + " " + item.getKey() + " " + searchedProduct.getProductName());
-            if (item.getKey().equals(searchedProduct.getProductName())) {
-                order = new OrderDTO(item.getKey(), item.getValue(), searchedProduct.getQuantity());
-                //System.out.println(order);
-                break;
-            }
-        }
+            //if (item.getKey().equals(searchedProduct.getProductName())) {
+              //  order = new OrderDTO(item.getKey(), item.getValue(), searchedProduct.getQuantity());
+                //Shop shop = (Shop) order.getShop();
+                //shop.process();
+              //  break;
+           // }
+        //}
             if(order==null){
                 throw new NoInventory();
             }
