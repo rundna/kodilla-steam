@@ -4,7 +4,7 @@ public class Application {
 
     public static void main(String[] args){
         SearchProduct product = new SearchProduct();
-        OrderProcess process = new OrderProcess();
+        OrderRetriever process = new OrderRetriever();
         //System.out.println(product.searchProduct().getProductName());
         //process.searchInventory(product.searchProduct());
         try {

@@ -3,12 +3,12 @@ package com.kodilla.good.patterns.food2doors;
 import java.security.Key;
 import java.util.*;
 
-public class OrderProcess {
+public class OrderRetriever {
     private OrderDTO order;
 
     public OrderDTO searchInventory(OrderItem searchedProduct) throws NoInventory
         {
-        Map<String, Object> inventory = new HashMap<>();
+        HashMap<String, Object> inventory = new HashMap<>();
 
         inventory.put("banana", new VegeShop());
         inventory.put("apple",new VegeShop());
