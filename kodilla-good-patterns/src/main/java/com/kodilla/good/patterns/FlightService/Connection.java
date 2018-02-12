@@ -32,7 +32,7 @@ public class Connection {
     @Override
     public int hashCode() {
 
-        return Objects.hash(departure);
+        return Objects.hash(departure,arrival);
     }
 
     @Override
